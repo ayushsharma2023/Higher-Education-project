@@ -1,9 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 from model import load_model, predict_student_success, get_feature_names
+import json
 
 app = Flask(__name__)
 model = load_model()
 feature_names = get_feature_names()
+
+# Load questions from JSON file
+with open('questions.json', 'r') as f:
+    questions_data = json.load(f)
 
 @app.route('/')
 def index():
@@ -51,6 +56,63 @@ def predict():
         'prediction': prediction,
         'pie_data': pie_data,
         'suggestion': suggestion
+    })
+
+@app.route('/get_questions', methods=['GET'])
+def get_questions():
+    skill = request.args.get('skill')
+    level = request.args.get('level', 'beginner')  # beginner or experienced
+    
+    if not skill or skill not in questions_data:
+        return jsonify({'error': 'Invalid skill'}), 400
+    
+    if level not in questions_data[skill]:
+        return jsonify({'error': 'Invalid level'}), 400
+    
+    questions = questions_data[skill][level]
+    return jsonify({'questions': questions})
+
+@app.route('/evaluate_quiz', methods=['POST'])
+def evaluate_quiz():
+    data = request.get_json(silent=True)
+    if not data:
+        return jsonify({'error': 'No data provided'}), 400
+    
+    skill = data.get('skill')
+    level = data.get('level', 'beginner')
+    answers = data.get('answers', [])
+    
+    if not skill or skill not in questions_data:
+        return jsonify({'error': 'Invalid skill'}), 400
+    
+    if level not in questions_data[skill]:
+        return jsonify({'error': 'Invalid level'}), 400
+    
+    questions = questions_data[skill][level]
+    correct_count = 0
+    
+    for i, answer in enumerate(answers):
+        if i < len(questions):
+            if answer == questions[i]['correct']:
+                correct_count += 1
+    
+    percentage = (correct_count / len(questions)) * 100 if questions else 0
+    
+    # Determine proficiency level
+    if percentage >= 80:
+        proficiency = "Expert"
+    elif percentage >= 60:
+        proficiency = "Advanced"
+    elif percentage >= 40:
+        proficiency = "Intermediate"
+    else:
+        proficiency = "Beginner"
+    
+    return jsonify({
+        'correct': correct_count,
+        'total': len(questions),
+        'percentage': round(percentage, 2),
+        'proficiency': proficiency
     })
 
 if __name__ == '__main__':

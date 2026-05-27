@@ -9,11 +9,20 @@
   </head>
   <body>
     <div class="container">
-      <h1>Student Success Predictor</h1>
+      <h1>Student Success Predictor & Skill Assessment</h1>
       <p>
         Select your field and enter student progress values to get a success
-        prediction.
+        prediction, or take a skill assessment quiz.
       </p>
+      
+      <!-- Navigation Tabs -->
+      <div class="tabs">
+        <button class="tab-button active" onclick="switchTab('predictor')">Success Predictor</button>
+        <button class="tab-button" onclick="switchTab('quiz')">Skill Assessment Quiz</button>
+      </div>
+
+      <!-- Predictor Section -->
+      <div id="predictor-section" class="tab-content active">
       <form id="predict-form">
         <label for="field">Field of Interest</label>
         <select id="field" required>
@@ -62,6 +71,55 @@
         <canvas id="importanceChart"></canvas>
       </div>
       <div id="suggestion"></div>
+      </div>
+
+      <!-- Quiz Section -->
+      <div id="quiz-section" class="tab-content">
+        <div id="quiz-setup">
+          <h2>Skill Assessment Quiz</h2>
+          <label for="quiz-skill">Select Skill:</label>
+          <select id="quiz-skill" required>
+            <option value="">Choose a skill</option>
+            <option value="data_analyst">Data Analyst</option>
+            <option value="data_science">Data Science</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="development">Web Development</option>
+          </select>
+
+          <label for="quiz-level">Select Level:</label>
+          <select id="quiz-level" required>
+            <option value="beginner">Beginner (10 Questions)</option>
+            <option value="experienced">Experienced (10 Questions)</option>
+          </select>
+
+          <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <div id="quiz-container" style="display: none">
+          <div class="quiz-progress">
+            <span id="question-counter">Question 1 of 10</span>
+            <div class="progress-bar">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <div id="quiz-questions"></div>
+          
+          <button onclick="submitQuiz()" style="display: none;" id="submit-btn">Submit Quiz</button>
+          <button onclick="resetQuiz()" style="display: none;" id="reset-btn">Take Another Quiz</button>
+        </div>
+
+        <div id="quiz-result" style="display: none;">
+          <h2>Quiz Results</h2>
+          <div class="result-card">
+            <p><strong>Score:</strong> <span id="score-text"></span></p>
+            <p><strong>Percentage:</strong> <span id="percentage-text"></span>%</p>
+            <p><strong>Proficiency Level:</strong> <span id="proficiency-text"></span></p>
+          </div>
+          <button onclick="resetQuiz()" class="primary-btn">Take Another Quiz</button>
+        </div>
+      </div>
+
     </div>
     <script src="/static/js/app.js"></script>
   </body>

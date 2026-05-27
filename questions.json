@@ -1,0 +1,506 @@
+{
+  "data_analyst": {
+    "beginner": [
+      {
+        "id": 1,
+        "question": "What does CSV stand for?",
+        "options": ["Comma Separated Values", "Central Storage Variable", "Code Structure Validation", "Computer System Version"],
+        "correct": 0
+      },
+      {
+        "id": 2,
+        "question": "Which function in Python is used to read a CSV file?",
+        "options": ["read_csv()", "open_file()", "pd.read_csv()", "load_csv()"],
+        "correct": 2
+      },
+      {
+        "id": 3,
+        "question": "What is the primary purpose of data cleaning?",
+        "options": ["Deleting all data", "Removing errors and inconsistencies", "Compressing files", "Creating backups"],
+        "correct": 1
+      },
+      {
+        "id": 4,
+        "question": "Which library is most commonly used for data analysis in Python?",
+        "options": ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
+        "correct": 1
+      },
+      {
+        "id": 5,
+        "question": "What is a null value in a dataset?",
+        "options": ["A value of 0", "A missing or undefined value", "An empty string", "A value of -1"],
+        "correct": 1
+      },
+      {
+        "id": 6,
+        "question": "Which of the following is NOT a type of data?",
+        "options": ["Numerical", "Categorical", "Temporal", "Fictional"],
+        "correct": 3
+      },
+      {
+        "id": 7,
+        "question": "What does EDA stand for?",
+        "options": ["Electronic Data Analysis", "Exploratory Data Analysis", "Extended Data Architecture", "Executive Data Administration"],
+        "correct": 1
+      },
+      {
+        "id": 8,
+        "question": "Which visualization is best for showing parts of a whole?",
+        "options": ["Line chart", "Pie chart", "Scatter plot", "Bar chart"],
+        "correct": 1
+      },
+      {
+        "id": 9,
+        "question": "What is the mean of the dataset: 2, 4, 6, 8, 10?",
+        "options": ["5", "6", "7", "8"],
+        "correct": 2
+      },
+      {
+        "id": 10,
+        "question": "Which tool is used for creating pivot tables?",
+        "options": ["Excel or Pandas", "Word", "PowerPoint", "Access"],
+        "correct": 0
+      }
+    ],
+    "experienced": [
+      {
+        "id": 11,
+        "question": "What is the time complexity of sorting using quicksort algorithm?",
+        "options": ["O(n)", "O(n log n)", "O(n²)", "O(n³)"],
+        "correct": 1
+      },
+      {
+        "id": 12,
+        "question": "Explain the difference between supervised and unsupervised learning.",
+        "options": ["Same thing with different names", "Supervised has labels, unsupervised doesn't", "Unsupervised is faster", "Supervised uses less data"],
+        "correct": 1
+      },
+      {
+        "id": 13,
+        "question": "What is overfitting in machine learning?",
+        "options": ["Model is too simple", "Model fits training data too closely", "Using too little data", "Using categorical features"],
+        "correct": 1
+      },
+      {
+        "id": 14,
+        "question": "Which statistical test would you use for hypothesis testing with two means?",
+        "options": ["Chi-square", "T-test", "Z-test", "ANOVA"],
+        "correct": 1
+      },
+      {
+        "id": 15,
+        "question": "What does the Pearson correlation coefficient measure?",
+        "options": ["Variance", "Linear relationship strength", "Data distribution", "Sample size"],
+        "correct": 1
+      },
+      {
+        "id": 16,
+        "question": "How would you handle imbalanced datasets?",
+        "options": ["Ignore it", "Use SMOTE, stratified sampling, or weighted loss", "Remove minority class", "Double the data"],
+        "correct": 1
+      },
+      {
+        "id": 17,
+        "question": "What is the purpose of cross-validation?",
+        "options": ["To validate across countries", "To assess model generalization", "To speed up training", "To reduce data size"],
+        "correct": 1
+      },
+      {
+        "id": 18,
+        "question": "Which metric is best for imbalanced classification?",
+        "options": ["Accuracy", "Precision/Recall/F1-score", "Mean", "Mode"],
+        "correct": 1
+      },
+      {
+        "id": 19,
+        "question": "What is feature engineering?",
+        "options": ["Creating a database", "Creating new features from raw data", "Writing code", "Debugging"],
+        "correct": 1
+      },
+      {
+        "id": 20,
+        "question": "Explain the bias-variance tradeoff.",
+        "options": ["No such concept exists", "Balance between model complexity and accuracy", "About data bias only", "About variance only"],
+        "correct": 1
+      }
+    ]
+  },
+  "cybersecurity": {
+    "beginner": [
+      {
+        "id": 1,
+        "question": "What does VPN stand for?",
+        "options": ["Virtual Private Network", "Virtual Public Network", "Virtual Personal Node", "Virtual Protocol Number"],
+        "correct": 0
+      },
+      {
+        "id": 2,
+        "question": "Which of the following is a strong password characteristic?",
+        "options": ["Easy to remember", "Mix of uppercase, lowercase, numbers, and symbols", "Your name", "123456"],
+        "correct": 1
+      },
+      {
+        "id": 3,
+        "question": "What is phishing?",
+        "options": ["A type of fish", "Fraudulent attempt to obtain sensitive info via email", "Network protocol", "Firewall setting"],
+        "correct": 1
+      },
+      {
+        "id": 4,
+        "question": "What does SSL/TLS stand for?",
+        "options": ["Secure Socket Layer / Transport Layer Security", "Software System Layer", "System Storage Link", "Secure Sharing Link"],
+        "correct": 0
+      },
+      {
+        "id": 5,
+        "question": "Which attack involves overwhelming a server with traffic?",
+        "options": ["SQL Injection", "DDoS Attack", "XSS", "Malware"],
+        "correct": 1
+      },
+      {
+        "id": 6,
+        "question": "What is two-factor authentication (2FA)?",
+        "options": ["Using two passwords", "Two different devices", "Two layers of security verification", "Two browsers"],
+        "correct": 2
+      },
+      {
+        "id": 7,
+        "question": "What is malware?",
+        "options": ["Hardware issue", "Software designed to harm computer systems", "A type of browser", "Network cable"],
+        "correct": 1
+      },
+      {
+        "id": 8,
+        "question": "Which protocol is used for secure email?",
+        "options": ["HTTP", "PGP/S-MIME", "FTP", "SMTP"],
+        "correct": 1
+      },
+      {
+        "id": 9,
+        "question": "What is a firewall?",
+        "options": ["A physical wall", "Software/hardware that controls network traffic", "A type of password", "A backup system"],
+        "correct": 1
+      },
+      {
+        "id": 10,
+        "question": "What does encryption do?",
+        "options": ["Compresses files", "Converts data to unreadable format using keys", "Deletes files", "Creates copies"],
+        "correct": 1
+      }
+    ],
+    "experienced": [
+      {
+        "id": 11,
+        "question": "What is a zero-day vulnerability?",
+        "options": ["Vulnerability found on day 0", "Previously unknown vulnerability", "Patched vulnerability", "Vulnerability lasting one day"],
+        "correct": 1
+      },
+      {
+        "id": 12,
+        "question": "Explain the difference between symmetric and asymmetric encryption.",
+        "options": ["Same encryption method", "Symmetric uses one key, asymmetric uses public/private keys", "Symmetric is faster but weaker", "Asymmetric is obsolete"],
+        "correct": 1
+      },
+      {
+        "id": 13,
+        "question": "What is a man-in-the-middle (MITM) attack?",
+        "options": ["Attack by middle management", "Attacker intercepts communication between two parties", "Network maintenance", "Hardware failure"],
+        "correct": 1
+      },
+      {
+        "id": 14,
+        "question": "What is the purpose of a honeypot?",
+        "options": ["Store data", "Trap and detect attackers", "Encrypt data", "Backup system"],
+        "correct": 1
+      },
+      {
+        "id": 15,
+        "question": "What is a botnet?",
+        "options": ["Network of robots", "Network of compromised devices controlled remotely", "Firewall", "VPN service"],
+        "correct": 1
+      },
+      {
+        "id": 16,
+        "question": "Explain privilege escalation.",
+        "options": ["Promotion at work", "Gaining higher access rights than intended", "Network upgrade", "Password change"],
+        "correct": 1
+      },
+      {
+        "id": 17,
+        "question": "What is SQL injection?",
+        "options": ["Injecting medicine", "Inserting malicious SQL code into input fields", "Programming technique", "Database backup"],
+        "correct": 1
+      },
+      {
+        "id": 18,
+        "question": "What does PKI (Public Key Infrastructure) provide?",
+        "options": ["Data storage", "Framework for secure communication via cryptography", "Network speed", "Virus protection"],
+        "correct": 1
+      },
+      {
+        "id": 19,
+        "question": "What is a certificate authority (CA)?",
+        "options": ["Government agency", "Organization that issues digital certificates", "Internet provider", "Security company"],
+        "correct": 1
+      },
+      {
+        "id": 20,
+        "question": "Explain the principle of least privilege.",
+        "options": ["Minimum password length", "Users should have minimal necessary permissions", "Least popular software", "Minimum security level"],
+        "correct": 1
+      }
+    ]
+  },
+  "development": {
+    "beginner": [
+      {
+        "id": 1,
+        "question": "What does HTML stand for?",
+        "options": ["Hyper Text Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
+        "correct": 0
+      },
+      {
+        "id": 2,
+        "question": "Which language is used for styling web pages?",
+        "options": ["HTML", "CSS", "JavaScript", "Python"],
+        "correct": 1
+      },
+      {
+        "id": 3,
+        "question": "What is the purpose of JavaScript?",
+        "options": ["Styling pages", "Making web pages interactive", "Storing data", "Creating databases"],
+        "correct": 1
+      },
+      {
+        "id": 4,
+        "question": "What is a variable in programming?",
+        "options": ["A constant value", "A named storage location for data", "A function", "A loop"],
+        "correct": 1
+      },
+      {
+        "id": 5,
+        "question": "Which of these is NOT a programming language?",
+        "options": ["Python", "Java", "CSS", "Ruby"],
+        "correct": 2
+      },
+      {
+        "id": 6,
+        "question": "What is a function in programming?",
+        "options": ["A loop", "Reusable block of code that performs a task", "A variable", "A comment"],
+        "correct": 1
+      },
+      {
+        "id": 7,
+        "question": "What does API stand for?",
+        "options": ["Application Programming Interface", "Advanced Program Interaction", "Application Process Integration", "Automated Programming Input"],
+        "correct": 0
+      },
+      {
+        "id": 8,
+        "question": "What is Git used for?",
+        "options": ["Writing code", "Version control and collaboration", "Debugging", "Testing"],
+        "correct": 1
+      },
+      {
+        "id": 9,
+        "question": "What is a database?",
+        "options": ["A type of code", "Organized collection of structured data", "A programming language", "A web browser"],
+        "correct": 1
+      },
+      {
+        "id": 10,
+        "question": "What does JSON stand for?",
+        "options": ["JavaScript Object Notation", "Java System Operation Network", "JavaScript Objective Node", "Java Source Object Notation"],
+        "correct": 0
+      }
+    ],
+    "experienced": [
+      {
+        "id": 11,
+        "question": "What is the difference between let, const, and var in JavaScript?",
+        "options": ["No difference", "Different scope and hoisting behavior", "Just naming conventions", "Only const works"],
+        "correct": 1
+      },
+      {
+        "id": 12,
+        "question": "Explain the concept of closures in JavaScript.",
+        "options": ["Ending a program", "Function with access to its outer scope", "Comments", "Loop termination"],
+        "correct": 1
+      },
+      {
+        "id": 13,
+        "question": "What is the MVC architecture pattern?",
+        "options": ["Model-View-Controller", "Modern-Version-Code", "Multiple-Virtual-Components", "Main-Virtual-Channel"],
+        "correct": 0
+      },
+      {
+        "id": 14,
+        "question": "What is REST in API design?",
+        "options": ["Sleep time", "Representational State Transfer", "Request Execution System", "Response Text Structure"],
+        "correct": 1
+      },
+      {
+        "id": 15,
+        "question": "Explain callback functions and promises.",
+        "options": ["Phone calls", "Callbacks are functions called later, promises handle async operations", "Email functions", "Return statements"],
+        "correct": 1
+      },
+      {
+        "id": 16,
+        "question": "What is containerization (Docker)?",
+        "options": ["Storing in boxes", "Packaging applications with dependencies", "Database concept", "Compression method"],
+        "correct": 1
+      },
+      {
+        "id": 17,
+        "question": "What is the difference between synchronous and asynchronous code?",
+        "options": ["Same thing", "Sync waits for completion, async doesn't", "Async is always faster", "Sync is obsolete"],
+        "correct": 1
+      },
+      {
+        "id": 18,
+        "question": "What are microservices?",
+        "options": ["Small services", "Independent services that work together", "Tiny functions", "Service monitoring"],
+        "correct": 1
+      },
+      {
+        "id": 19,
+        "question": "Explain SOLID principles in OOP.",
+        "options": ["Solid materials", "Design principles for maintainable code", "Physics concept", "Database rules"],
+        "correct": 1
+      },
+      {
+        "id": 20,
+        "question": "What is continuous integration/continuous deployment (CI/CD)?",
+        "options": ["Joining circles", "Automated pipeline for testing and deploying code", "Manual process", "Documentation method"],
+        "correct": 1
+      }
+    ]
+  },
+  "data_science": {
+    "beginner": [
+      {
+        "id": 1,
+        "question": "What is data science?",
+        "options": ["Science of storage", "Extracting insights from data using statistics and ML", "Studying data types", "Creating databases"],
+        "correct": 1
+      },
+      {
+        "id": 2,
+        "question": "What are the main steps in the data science workflow?",
+        "options": ["Random", "Collect, Clean, Analyze, Model, Deploy", "Just analyze", "Only predict"],
+        "correct": 1
+      },
+      {
+        "id": 3,
+        "question": "What is machine learning?",
+        "options": ["Learning about machines", "Systems that learn from data without explicit programming", "Teaching computers", "Writing code"],
+        "correct": 1
+      },
+      {
+        "id": 4,
+        "question": "What is the difference between AI and ML?",
+        "options": ["No difference", "AI is broader field, ML is subset focused on learning", "Same technology", "AI is outdated"],
+        "correct": 1
+      },
+      {
+        "id": 5,
+        "question": "What is a classification problem?",
+        "options": ["Organizing files", "Predicting category/class of data", "Creating classes", "Academic classification"],
+        "correct": 1
+      },
+      {
+        "id": 6,
+        "question": "What is a regression problem?",
+        "options": ["Going backwards", "Predicting continuous numerical values", "Statistical analysis only", "Classification"],
+        "correct": 1
+      },
+      {
+        "id": 7,
+        "question": "What does supervised learning require?",
+        "options": ["Supervision always", "Labeled training data", "No data", "Random guessing"],
+        "correct": 1
+      },
+      {
+        "id": 8,
+        "question": "What is clustering?",
+        "options": ["Grouping objects together", "Grouping similar data points without labels", "Organizing files", "Connecting networks"],
+        "correct": 1
+      },
+      {
+        "id": 9,
+        "question": "What is a feature in machine learning?",
+        "options": ["A characteristic of an object", "Input variable used for prediction", "Program feature", "User interface"],
+        "correct": 1
+      },
+      {
+        "id": 10,
+        "question": "What is train-test split used for?",
+        "options": ["Dividing staff", "Separating data to evaluate model performance", "Splitting data randomly", "Testing employees"],
+        "correct": 1
+      }
+    ],
+    "experienced": [
+      {
+        "id": 11,
+        "question": "Explain the curse of dimensionality.",
+        "options": ["Supernatural problem", "Performance degrades with too many features", "Database issue", "Programming bug"],
+        "correct": 1
+      },
+      {
+        "id": 12,
+        "question": "What is ensemble learning?",
+        "options": ["Music group", "Combining multiple models for better predictions", "Single model", "Manual process"],
+        "correct": 1
+      },
+      {
+        "id": 13,
+        "question": "Explain gradient descent.",
+        "options": ["Going down stairs", "Optimization algorithm to minimize loss function", "Statistical method", "Data sorting"],
+        "correct": 1
+      },
+      {
+        "id": 14,
+        "question": "What is regularization in ML?",
+        "options": ["Making routine", "Technique to prevent overfitting", "Data cleaning", "Code formatting"],
+        "correct": 1
+      },
+      {
+        "id": 15,
+        "question": "What is backpropagation in neural networks?",
+        "options": ["Going backward", "Algorithm to train neural networks by computing gradients", "Debugging", "Error correction"],
+        "correct": 1
+      },
+      {
+        "id": 16,
+        "question": "What is transfer learning?",
+        "options": ["Moving data", "Using pre-trained models for new tasks", "Data migration", "Knowledge sharing"],
+        "correct": 1
+      },
+      {
+        "id": 17,
+        "question": "Explain ROC-AUC curve.",
+        "options": ["Circle shape", "Metric for evaluating classification models", "Graph type", "Performance indicator"],
+        "correct": 1
+      },
+      {
+        "id": 18,
+        "question": "What is deep learning?",
+        "options": ["Ocean depth", "ML with multiple layers of neural networks", "Thorough analysis", "Complex coding"],
+        "correct": 1
+      },
+      {
+        "id": 19,
+        "question": "What is natural language processing (NLP)?",
+        "options": ["Normal language", "Processing human language using AI", "Text editing", "Grammar checking"],
+        "correct": 1
+      },
+      {
+        "id": 20,
+        "question": "Explain A/B testing in data science.",
+        "options": ["Blood test", "Comparing two versions to determine which performs better", "Academic grading", "Statistical sampling"],
+        "correct": 1
+      }
+    ]
+  }
+}
