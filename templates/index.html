@@ -116,7 +116,10 @@
             <p><strong>Percentage:</strong> <span id="percentage-text"></span>%</p>
             <p><strong>Proficiency Level:</strong> <span id="proficiency-text"></span></p>
           </div>
-          <button onclick="resetQuiz()" class="primary-btn">Take Another Quiz</button>
+          <div style="display: flex; gap: 0.5rem; flex-direction: column;">
+            <button onclick="useQuizResultsInPredictor()" class="primary-btn">Use Results in Predictor</button>
+            <button onclick="resetQuiz()" class="primary-btn">Take Another Quiz</button>
+          </div>
         </div>
       </div>
 

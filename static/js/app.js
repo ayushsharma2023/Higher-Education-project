@@ -131,6 +131,7 @@ function renderChart(pieData) {
 let currentQuestions = [];
 let currentAnswers = [];
 let currentQuestionIndex = 0;
+let lastQuizResult = null;
 
 function switchTab(tabName) {
     // Hide all tab contents
@@ -265,6 +266,16 @@ async function submitQuiz() {
             return;
         }
         
+        // Store quiz results
+        lastQuizResult = {
+            skill: skill,
+            level: level,
+            percentage: data.percentage,
+            proficiency: data.proficiency,
+            correct: data.correct,
+            total: data.total
+        };
+        
         // Display results
         document.getElementById('quiz-container').style.display = 'none';
         document.getElementById('quiz-result').style.display = 'block';
@@ -293,4 +304,59 @@ function resetQuiz() {
     currentQuestions = [];
     currentAnswers = [];
     currentQuestionIndex = 0;
+}
+
+function useQuizResultsInPredictor() {
+    if (!lastQuizResult) {
+        alert('No quiz results to use');
+        return;
+    }
+    
+    // Map skill names to field values
+    const skillMap = {
+        'data_analyst': 'data_analyst',
+        'data_science': 'data_analyst',  // Treat data science as data analyst for field selection
+        'cybersecurity': 'cybersecurity',
+        'development': 'development'
+    };
+    
+    const field = skillMap[lastQuizResult.skill] || lastQuizResult.skill;
+    const proficiencyScore = Math.ceil((lastQuizResult.percentage / 100) * 10);  // Convert percentage to 1-10 scale
+    const experiencePercentage = lastQuizResult.percentage;
+    
+    // Set field
+    document.getElementById('field').value = field;
+    toggleAdditionalFields();
+    
+    // Fill in the quiz-based fields
+    document.getElementById('field_knowledge').value = proficiencyScore;
+    document.getElementById('experience').value = experiencePercentage;
+    
+    // Optional: Auto-fill other fields with reasonable defaults
+    if (!document.getElementById('study_hours').value) {
+        document.getElementById('study_hours').value = proficiencyScore;
+    }
+    if (!document.getElementById('attendance').value) {
+        document.getElementById('attendance').value = (proficiencyScore / 10) * 100;
+    }
+    if (!document.getElementById('assignments').value) {
+        document.getElementById('assignments').value = (proficiencyScore / 10) * 100;
+    }
+    if (!document.getElementById('participation').value) {
+        document.getElementById('participation').value = proficiencyScore;
+    }
+    if (!document.getElementById('skills_score').value) {
+        document.getElementById('skills_score').value = proficiencyScore;
+    }
+    
+    // Switch to predictor tab
+    switchTab('predictor');
+    
+    // Show success message
+    const msgDiv = document.createElement('div');
+    msgDiv.style.cssText = 'background: rgba(124, 179, 66, 0.3); border: 2px solid #7cb342; color: #c8e6c9; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; text-align: center;';
+    msgDiv.textContent = `✓ Quiz results applied! Field Knowledge: ${proficiencyScore}/10, Experience: ${experiencePercentage}%`;
+    document.getElementById('predict-form').parentElement.insertBefore(msgDiv, document.getElementById('predict-form'));
+    
+    setTimeout(() => msgDiv.remove(), 5000);
 }
